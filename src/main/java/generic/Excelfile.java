@@ -8,7 +8,7 @@ import org.testng.Reporter;
 
 public class Excelfile implements AutoConstant{
 	
-	public String getexceldata(String sheetname,int rownum,int cellnum)
+	public static String getexceldata(String sheetname,int rownum,int cellnum)
 	{
 		String s=null;
 		try {

@@ -1,5 +1,7 @@
 package generic;
 
+import java.util.concurrent.TimeUnit;
+
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.testng.ITestResult;
@@ -11,10 +13,11 @@ public class BaseTest implements AutoConstant {
 	@BeforeMethod
 	public void openapp()
 	{
-	System.setProperty(key, value);
+	System.setProperty(key1, value);
 	driver=new ChromeDriver();
 	driver.get(Propertyfile.getdatapropertyfile("url"));
-	
+	driver.manage().window().maximize();
+	driver.manage().timeouts().implicitlyWait(10,TimeUnit.SECONDS);
 	}
 	
 	@AfterMethod

@@ -7,18 +7,19 @@ import org.testng.Reporter;
 
 public class Propertyfile implements AutoConstant{
 	
-	public static String getdatapropertyfile(String key)
+	public static String getdatapropertyfile(String keyvalue)
 	{
+		String s=null;
 		Properties p=new Properties();
 		try {
 		p.load(new FileInputStream(propertyfilepath));
-		p.getProperty(key);
+		s=p.getProperty(keyvalue);
 		}
 		catch(Exception e)
 		{
 			Reporter.log("data is not freteched",true);
 		}
-		return key;
+		return s;
 	
 		
 	}

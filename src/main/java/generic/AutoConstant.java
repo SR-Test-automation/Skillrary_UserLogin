@@ -2,13 +2,13 @@ package generic;
 
 public interface AutoConstant {
 	
-	String key="webdriver.chrome.driver";
+	String key1="webdriver.chrome.driver";
 	
 	String value="./src/main/resources/chromedriver.exe";
 	
-	String propertyfilepath="./src/test/resource/data.properties";
+	String propertyfilepath="C:\\Users\\QSP\\eclipse-workspace\\seleniumpro\\com.SkillraryUser\\src\\test\\resources\\data.properties";
 	
-	String excelfilepath="./src/test/resource/execldata.xlsx";
+	String excelfilepath="C:\\Users\\QSP\\eclipse-workspace\\seleniumpro\\com.SkillraryUser\\src\\test\\resources\\execldata.xlsx";
 	
 	String photopath="./src/test/resource/photo/";
 	
