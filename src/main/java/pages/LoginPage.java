@@ -1,39 +1,29 @@
 package pages;
 
-
-import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
-import org.openqa.selenium.support.PageFactory;
+import org.testng.annotations.Test;
 
 public class LoginPage {
-	public WebDriver driver;
-	@FindBy(xpath="//a[@title='Log in to your customer account']")
-	private WebElement signinbtn;
+	@FindBy(xpath="//a[.='Sign In']")
+	private WebElement signIn;
 	
-	@FindBy(xpath="//input[@id='email']")
-	private WebElement emailaddress;
+	@FindBy(id="email")
+	private WebElement emailAddresstb;
 	
-	@FindBy(id="passwd")
-	private WebElement password;
+	@FindBy(name="password")
+	private WebElement passwordTb;
 	
-	@FindBy(id="SubmitLogin")
-	private WebElement loginbtn;
+	@FindBy(name="captcha_type")
+	private WebElement trynumbercaptch;
 	
-	public LoginPage(WebDriver driver)
-	{
-		PageFactory.initElements(driver,this);
-		this.driver=driver;
-	}
+	@FindBy(xpath="//button[.=' Submit ']")
+	private WebElement sumbitbtn;
 	
-	public HomePage logincreditails(String email,String passw)
-	{
-		signinbtn.click();
-		emailaddress.sendKeys(email);
-		password.sendKeys(passw);
-		loginbtn.click();
-		return new HomePage(driver);
-	}
 	
+	
+	
+	
+
 
 }
